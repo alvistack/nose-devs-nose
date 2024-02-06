@@ -18,7 +18,7 @@ method.
     >>> from nose.plugins.manager import RestrictedPluginManager
     >>> class StartPlugin(Plugin):
     ...     def startTest(self, test):
-    ...         print "started %s" % test
+    ...         print(("started %s" % test))
 
 .. Note ::
 
@@ -87,3 +87,5 @@ error is raised.
     Traceback (most recent call last):
     ...
     SystemExit: 2
+
+

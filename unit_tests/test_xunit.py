@@ -112,7 +112,7 @@ class TestXMLOutputWithXML(unittest.TestCase):
         self.x.addFailure(test, some_err)
 
         result = self.get_xml_report()
-        print result
+        print(result)
 
         if self.ET:
             tree = self.ET.fromstring(result)
@@ -155,7 +155,7 @@ class TestXMLOutputWithXML(unittest.TestCase):
         self.x.addFailure(test, some_err)
 
         result = self.get_xml_report()
-        print result
+        print(result)
 
         if self.ET:
             tree = self.ET.fromstring(result)
@@ -179,7 +179,7 @@ class TestXMLOutputWithXML(unittest.TestCase):
         self.x.addError(test, some_err)
 
         result = self.get_xml_report()
-        print result
+        print(result)
 
         if self.ET:
             tree = self.ET.fromstring(result)
@@ -220,7 +220,7 @@ class TestXMLOutputWithXML(unittest.TestCase):
             some_err = sys.exc_info()
         self.x.addError(test, some_err)
         result = self.get_xml_report()
-        print repr(result)
+        print((repr(result)))
         if self.ET:
             tree = self.ET.fromstring(result)
             tc = tree.find("testcase")
@@ -230,7 +230,7 @@ class TestXMLOutputWithXML(unittest.TestCase):
                     '\x80')
             else:
                 eq_(err.attrib['message'],
-                    u'\ufffd')
+                    '\\ufffd')
         else:
             # this is a dumb test for 2.4-
             assert 'RuntimeError: \xef\xbf\xbd' in result
@@ -249,7 +249,7 @@ class TestXMLOutputWithXML(unittest.TestCase):
         self.x.addError(test, some_err)
 
         result = self.get_xml_report()
-        print result
+        print(result)
 
         if self.ET:
             tree = self.ET.fromstring(result)
@@ -268,7 +268,7 @@ class TestXMLOutputWithXML(unittest.TestCase):
         self.x.addSuccess(test, (None,None,None))
 
         result = self.get_xml_report()
-        print result
+        print(result)
 
         if self.ET:
             tree = self.ET.fromstring(result)
@@ -297,7 +297,7 @@ class TestXMLOutputWithXML(unittest.TestCase):
         self.x.addSuccess(test, (None,None,None))
 
         result = self.get_xml_report()
-        print result
+        print(result)
 
         if self.ET:
             tree = self.ET.fromstring(result)

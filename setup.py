@@ -13,8 +13,7 @@ if sys.version_info >= (3,):
         from distribute_setup import use_setuptools
         use_setuptools()
 
-    extra = {'use_2to3': True,
-             'test_dirs': test_dirs,
+    extra = {'test_dirs': test_dirs,
              'test_build_dir': 'build/tests',
              'pyversion_patching': True,
              }

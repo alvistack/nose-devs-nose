@@ -1,0 +1,4 @@
+python3-nose: copyright-without-copyright-notice
+python3-nose: initial-upload-closes-no-bugs
+python3-nose: no-manual-page
+python3-nose: zero-byte-file-in-doc-directory

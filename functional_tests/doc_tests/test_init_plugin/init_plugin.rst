@@ -130,7 +130,7 @@ specify a configuration file on the command line:
     ...     def begin(self):
     ...         ConfigurableWidget.cfg = self.cfg
     ...     def load_config(self, path):
-    ...         from ConfigParser import ConfigParser
+    ...         from configparser import ConfigParser
     ...         p = ConfigParser()
     ...         p.read([path])
     ...         self.cfg = dict(p.items('DEFAULT'))
@@ -164,3 +164,4 @@ resetting the widget system to an unconfigured state.
 
 .. _Pylons: http://pylonshq.com/
 .. _Django: http://www.djangoproject.com/
+

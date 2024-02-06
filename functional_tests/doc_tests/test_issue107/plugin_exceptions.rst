@@ -19,9 +19,9 @@ AttributeError in beforeTest and afterTest.
 
     >>> class EnabledPlugin(Plugin):
     ...     """Plugin that takes no command-line arguments"""
-    ...
+    ... 
     ...     enabled = True
-    ...
+    ... 
     ...     def configure(self, options, conf):
     ...         pass
     ...     def options(self, parser, env={}):
@@ -147,3 +147,4 @@ following test would crash nose:
     Ran 1 test in ...s
     <BLANKLINE>
     FAILED (errors=1)
+

@@ -6,14 +6,14 @@ by nose.plugins.base. They do not have to derive from
 nose.plugins.Plugin.
 
     >>> class NullPlugin(object):
-    ...
+    ... 
     ...     enabled = True
     ...     name = "null"
     ...     score = 100
-    ...
+    ... 
     ...     def options(self, parser, env):
     ...         pass
-    ...
+    ... 
     ...     def configure(self, options, conf):
     ...         pass
     >>> import unittest
@@ -31,19 +31,19 @@ name.
     >>> import os
     >>> from nose.plugins import Plugin
     >>> class DerivedNullPlugin(Plugin):
-    ...
+    ... 
     ...     name = "derived-null"
 
 Enabled plugin that's otherwise empty
 
     >>> class EnabledDerivedNullPlugin(Plugin):
-    ...
+    ... 
     ...     enabled = True
     ...     name = "enabled-derived-null"
-    ...
+    ... 
     ...     def options(self, parser, env=os.environ):
     ...         pass
-    ...
+    ... 
     ...     def configure(self, options, conf):
     ...         if not self.can_configure:
     ...             return
@@ -55,3 +55,4 @@ Enabled plugin that's otherwise empty
     Ran 0 tests in ...s
     <BLANKLINE>
     OK
+

@@ -1,0 +1,5 @@
+python-nose source: file-without-copyright-information
+python-nose source: no-debian-changes
+python-nose source: source-contains-prebuilt-windows-binary
+python-nose source: source-is-missing
+python-nose source: source-package-encodes-python-version

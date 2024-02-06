@@ -20,16 +20,16 @@ environment it's given by nose.
 
     >>> class PrintEnvPlugin(Plugin):
     ...     name = "print-env"
-    ...
+    ... 
     ...     # no command line arg needed to activate plugin
     ...     enabled = True
     ...     def configure(self, options, conf):
     ...         if not self.can_configure:
     ...             return
     ...         self.conf = conf
-    ...
+    ... 
     ...     def options(self, parser, env={}):
-    ...         print "env:", env
+    ...         print(("env:", env))
 
 To test the argv, we use a config class that prints the argv it's
 given by nose.  We need to monkeypatch nose.config.Config, so that we
@@ -37,9 +37,9 @@ can test the cases where that is used as the default.
 
     >>> old_config = nose.config.Config
     >>> class PrintArgvConfig(old_config):
-    ...
+    ... 
     ...     def configure(self, argv=None, doc=None):
-    ...         print "argv:", argv
+    ...         print(("argv:", argv))
     ...         old_config.configure(self, argv, doc)
     >>> nose.config.Config = PrintArgvConfig
 
@@ -52,7 +52,7 @@ subclassing.
     ...               FailureDetail(),
     ...               Capture(),
     ...               ]
-    ...
+    ... 
     ...    def makeSuite(self):
     ...        return unittest.TestSuite(tests=[])
 
@@ -158,3 +158,5 @@ Clean up.
     >>> os.environ = old_environ
     >>> sys.argv = old_argv
     >>> nose.config.Config = old_config
+
+

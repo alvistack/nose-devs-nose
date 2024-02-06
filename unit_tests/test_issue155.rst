@@ -11,18 +11,18 @@ handling intended to ignore the case where the method is not present.
     >>> import nose.plugins.doctests
 
     >>> class Result(nose.result.TextTestResult):
-    ...
+    ... 
     ...     def afterTest(self, test):
     ...         raise AttributeError("bug in Result")
-    ...
+    ... 
     ...     def beforeTest(self, test):
     ...         raise AttributeError("bug in Result")
 
     >>> class TestCase(unittest.TestCase):
-    ...
+    ... 
     ...     def address(self):
     ...         raise AttributeError("bug in TestCase")
-    ...
+    ... 
     ...     def runTest(self):
     ...         pass
 
@@ -44,3 +44,4 @@ handling intended to ignore the case where the method is not present.
     >>> nose.util.test_address(test)
     Traceback (most recent call last):
     AttributeError: bug in TestCase
+
